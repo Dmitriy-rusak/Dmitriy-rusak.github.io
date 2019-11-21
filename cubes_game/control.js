@@ -31,7 +31,6 @@ class Controller {
           max_speed = 1.5,
           w_h = 50,   //  ширина и высота квадрата
           cubes = [],
-          count_find = 1, //кол-во неудачных попыток найти Х старта квадрата
           score = document.getElementById('score'),
           count_score = 1,
           lost = document.getElementById('lost'),
@@ -57,20 +56,9 @@ class Controller {
           cubes.forEach(function(item) {
             if (x >= item.cube_x  &&  x < item.cube_x + w_h  &&  item.cube_y < w_h + 1  ||  x + w_h >= item.cube_x  &&  x + w_h < item.cube_x + w_h  &&  item.cube_y < w_h + 1) {
               x = Math.floor(Math.random() * (max - min + 1)) + min;
-              count_find++;
-
-              // если за 200 попыток Х не найден, задержка перед созданием квадрата 700 мс
-              if (count_find >= 200) {
-                count_find = 0;
-                clearTimeout(this.stop_create);
-                createTimeout.bind(this)(700);
-              } 
-              else {
               find_X();
-              }
             }
           });
-          count_find = 0;
           return x;
         }
         x = find_X();
@@ -94,19 +82,11 @@ class Controller {
       }
 
       //  интервал при создании квадратиков с разной задержкой
-      let createTimeout = function(delay){
-        let del;
-        //если функция вызвана с delay то задержка setTimeout равнв delay, если вызвана без delay то задержка random
-        if (arguments.length > 0){
-          del = delay;
-          cube_number++;
-        }
-        else {
-          del = Math.random()*1200;
-          createCube ();
-        }
+      let createTimeout = function(){
+        let del = Math.random()*1200;
+        createCube();
         clearTimeout(this.stop_create);
-        this.stop_create = setTimeout(createTimeout, del);
+        this.stop_create = setTimeout(createTimeout.bind(this), del);
         if (cube_number <= 0) clearTimeout(this.stop_create);
         ////cube_number  для остановки создания новых квадратов
       };
