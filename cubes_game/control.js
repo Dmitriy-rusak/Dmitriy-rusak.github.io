@@ -137,7 +137,7 @@ class Controller {
         this.Anim_id = requestAnimationFrame(move_cube.bind(this));
         
         // анимация останавливается когда массив с кубиками пустой
-        if (cubes.length == 0) {
+        if (cubes.length == 0  &&  cube_number <= 0) {
           cancelAnimationFrame(this.Anim_id);
         }
       }
