@@ -102,7 +102,7 @@ class Controller {
           cube_number++;
         }
         else {
-          del = Math.random()*1000;
+          del = Math.random()*1200;
           createCube ();
         }
         clearTimeout(this.stop_create);
