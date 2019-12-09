@@ -154,11 +154,7 @@
 					
 					delta_topY = - delta_topY;
 					block.live = false;
-					//block.classList.add('none');
-
-
-					//item.ball_topY = platf_topY - ball_size;  //можно поробовать убрать строку - мяч западал в платф.
-				//	ball_elem.style.top = item.ball_topY + 'px';
+					document.getElementById("score").innerHTML = ++score;
 
 			}
 
