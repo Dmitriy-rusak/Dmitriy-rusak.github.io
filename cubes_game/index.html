@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cubes game</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/png" href="icon.png">
+	<style>
+		body {
+			background-color: lavender;
+		}
+		canvas {
+			background: dimgray;
+		}
+		input {
+			position: relative;
+			width: 70px;
+			margin-left: 30px;
+		}
+		span {
+			position: relative;
+			font-size: 1.3em;
+			font-family: Algerian;
+		}
+		.center {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%, -50%);
+		}
+		.text {
+			bottom: 5px;
+			margin-left: 30px;
+		}
+	</style>
+</head>
+	<body>
+		<div class="center">
+
+	    <div>
+	      <input type="image" src="start.png" OnClick="controller.start();">
+	      
+	      <input type="image" src="stop.png" OnClick="controller.stop();">
+	      
+	      <span class="text"> Score: <span id="score"> 0 </span> </span>
+	      
+	      <span class="text"> Lost: <span id="lost"> 0 </span> </span>
+
+	      <span class="text"> Square: <span id="number"> 50 </span> </span>
+	    </div>
+
+		<canvas id="canvas"  width=640; height=480>Your browser is not supported Canvas.</canvas>
+
+	</div>
+	</body>
+	<script type="text/javascript" src="control.js"></script>
+</html>

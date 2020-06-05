@@ -1,0 +1,4 @@
+<FilesMatch ".(pdf|docx|jpg)$">
+        ForceType application/octet-stream
+        Header set Content-Disposition attachment
+</FilesMatch>

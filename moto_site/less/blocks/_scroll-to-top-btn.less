@@ -1,0 +1,31 @@
+.scroll-to-top-btn {
+	display: none;
+	position: fixed;
+	right: 35px;
+	bottom: 30px;
+	width: 40px;
+	height: 40px;
+	z-index: 3;
+	background: none;
+	border: none;
+	outline: none;
+	padding: 0;
+	cursor: pointer;
+	opacity: 0.7;
+
+	@media (min-width: 480px) {
+		right: 50px;
+		bottom: 40px;
+	}
+
+	@media (min-width: 768px) {
+		right: 100px;
+		bottom: 90px;
+		width: 47px;
+		height: 47px;
+	}	
+}
+
+.scroll-to-top-btn:hover {
+	opacity: 1;
+}

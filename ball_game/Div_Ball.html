@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Div Ball</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="image/png" href="icon.png">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header"> 
+	<span class="header_comment"> Live: <span id="live"> 3 </span> </span>
+	<span class="header_comment"> Score: <span id="score"> 0 </span> </span>
+	<span class="header_comment"> Your time: <span id="minutes"> 00 </span> : <span id="seconds"> 00 </span></span>
+</div>	
+
+<div class = "ground">
+	<div class="ball"> </div>
+	<div class="platform"> </div>
+</div>
+
+<script>
+	let ball_elem = document.querySelector('.ball');
+	let ball_size = ball_elem.offsetWidth; //диаметр мяча
+	let balls = [];
+	let ball = {
+		ball_leftX : ball_elem.offsetLeft, // текущ. лев. отступ мяча
+		ball_topY : ball_elem.offsetTop, // текущ. верх. отступ мяча
+		live : true  // жив ли мяч(лопнул или нет)
+	}
+
+
+	let ground = document.querySelector('.ground');
+	let max_leftX = ground.offsetWidth; // ширина поля, max движения мяча вправо
+	let max_topY = ground.offsetHeight;  //высота поля, max движ. мяча вниз
+	let delta_leftX = 2;
+	let delta_topY = -2;
+
+
+	let platform_elem = document.querySelector('.platform');
+	let platf_Width = platform_elem.offsetWidth;
+	let platf_leftX = max_leftX/2 - platf_Width/2;  // текущ. левый отступ платф. (левая граница платф. по X) - вычисляется взависимости от ширины поля и платф.
+	platform_elem.style.left = platf_leftX + 'px'; // предача текущ. левый отступ платф. (левая граница платф. по X) в CSS
+	let platf_topY = platform_elem.offsetTop; //  верхняя граница платф. по Y
+	let max_platf_leftX = max_leftX - platform_elem.offsetWidth;  // max движ. платф. вправо -- влево 0
+	let platf_rightX = platf_leftX + platf_Width;  // правая граница платф. по X, левый отступ + ширина платф.
+	let platf_height = platform_elem.offsetHeight;
+
+	let temp = 0; // врЕменная переменная;
+	let count_1523X = 0;
+	let count_upR = 0;
+
+
+	let countBlock = 10;
+	let blocks = [];
+	let block_left = 0;
+	let between_blockY = 10;
+	let block_top = between_blockY;   //первый верхний отступ блоков по Y;
+	let line_block = 3;
+	let color;
+	let score = 0;
+
+		
+	function Block(elem) {
+		this.block_link = elem;
+		this.topY = elem.offsetTop;
+		this.bottomY = elem.offsetTop + elem.offsetHeight;
+		this.leftX = elem.offsetLeft;
+		this.rightX = elem.offsetLeft + elem.offsetWidth;
+		this.live = true;
+		this.hits = 1;
+		this.color = color;
+	}
+
+	//blocks.push(block);
+
+
+
+	function createBlock(block_top){
+
+		 for (let i = 0; i < countBlock; i++){
+			let elem = document.createElement('div');
+			elem.className = 'block';
+			elem.style.top = block_top + 'px';
+			if (i == 0) {
+				block_left = 23; //первый левый отступ блоков;
+				elem.style.left = block_left + 'px';
+			} else {
+				block_left += 66;
+		 		elem.style.left = block_left + 'px';
+			}
+
+    let min_color = 120;
+    let max_color = 230;
+    let r = Math.floor(Math.random() * (max_color - min_color)) + min_color;
+    let g = Math.floor(Math.random() * (max_color - min_color)) + min_color;
+    let b = Math.floor(Math.random() * (max_color - min_color)) + min_color;
+    color = 'rgb(' + r + ', ' + g + ', ' + b +')';
+    elem.style.backgroundColor = color;
+			ground.append(elem);
+			// let middleX = elem.offsetLeft + 52;
+			// elem.style.left = middleX + 'px';
+			let block = new Block(elem);
+		 	blocks.push(block);
+		 }
+	}
+
+	for (let j = 0; j < line_block; j++){
+		createBlock(block_top);
+		block_top = block_top + between_blockY + 20;
+	}
+
+
+	balls.push(ball);
+
+
+	let interval = setInterval(function() { 
+		if (ball.live){  // если мяч жив(не лопнул), то двигать его
+			move_ball();
+		} else {
+			clearInterval(interval);
+		}
+	}, 20);
+
+
+</script>
+
+<script src="move_ball.js"></script>
+<script src="mouse.js"></script>
+</body>
+</html>

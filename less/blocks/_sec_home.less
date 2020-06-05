@@ -1,0 +1,116 @@
+#menubtn {
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	width: 20px;
+	height: 20px;
+	display: none;
+}
+
+#menubtn div {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #000; 
+}
+
+#menubtn div:nth-of-type(1) {
+	top: 0;
+} 
+
+#menubtn div:nth-of-type(2) {
+	top: 9px;
+} 
+
+#menubtn div:nth-of-type(3) {
+	bottom: 0;
+} 
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 30px;
+}
+
+header.sticky {
+	position: fixed;
+	top: 0;
+	z-index: 4;
+	background: #fff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	box-shadow: 0 0 10px 1px rgba(0,0,0, 0.5);
+}
+
+.logo {
+	margin-top: -2px;
+}
+
+nav a {
+	text-transform: uppercase;
+	margin-left: 32.7px;
+	padding-bottom: 7px;
+	position: relative;
+}
+
+nav a::after {
+	content: '';
+	display: block;
+	height: 2px;
+	width: 0%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: width 0.2s linear, box-shadow 0.2s linear 0.2s;
+	background-color: #212121;
+}
+
+nav a:hover::after, nav a.active::after {
+	width: 100%;
+	box-shadow: 2px -7px 2em 3px #777;
+}
+
+.home {
+	padding-top: 170px;
+	padding-bottom: 73px;
+	background: url('../img/me3.png') 87% 0%,  linear-gradient(90deg, #fff 55%, #e1e1e1 55%);
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 4;
+}
+
+.home::before {
+	content: '';
+	display: block;
+	width: calc(~"50vw - 340px");
+	height: 260px;
+	border: 15px solid #212121;
+	border-left: none;
+	opacity: 0.1;
+	position: absolute;
+	top: 110px;
+	left: 0;
+	z-index: 1; 
+}
+
+.home .btn, .home h1 {
+	position: relative;
+	z-index: 2;
+}
+
+.home .btn {
+	display: inline-block;
+	margin-right: 16px;
+}
+
+.top_text {
+	font-size: 2.2rem;
+	margin-bottom: 25px;
+	margin-top: 3px;
+}

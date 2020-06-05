@@ -1,0 +1,27 @@
+.loader {
+	width: 100vw;
+	height: 100vh;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;	
+	z-index: 1000;
+}
+
+.loader::before {
+	content: '';
+	display: block;
+	margin: auto;
+	width: 30px;
+	height: 30px;
+	background: url('https://image.flaticon.com/icons/svg/154/154376.svg');
+	background-size: contain;
+	animation: load 1.6s infinite linear;
+}
+
+@keyframes load {
+	100%{
+		transform: rotate(360deg);
+	}
+}

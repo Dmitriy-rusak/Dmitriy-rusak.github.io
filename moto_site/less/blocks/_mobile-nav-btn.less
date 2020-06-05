@@ -1,0 +1,59 @@
+.mobile-nav-btn {
+	position: relative;
+	z-index: 9;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+
+	@media (min-width: 980px) {
+    	display: none;
+   }
+}
+
+.mobile-nav-btn div {
+	position: absolute;
+	left: 0;
+	width: 30px;
+	height: 5px;
+}
+
+.mobile-nav-btn div:nth-of-type(1) {
+	top: 0;
+	background-color: @mainBlueColor;
+	transition: transform 0.2s ease-in, top 0.2s linear 0.2s, background-color 0.2s ease-in;
+}
+
+.mobile-nav-btn div:nth-of-type(2) {
+	top: 12.5px;
+	background-color: @mainBlueColor;
+	opacity: 1;
+	transition: opacity 0.2s linear 0.2s;
+}
+
+.mobile-nav-btn div:nth-of-type(3) {
+	top: 25px;
+	background-color: @mainBlueColor;
+	transition: transform 0.2s ease-in, top 0.2s linear 0.2s, background-color 0.2s ease-in;
+}
+
+.mobile-nav-btn.mobile-nav-btn-active div:nth-of-type(1) {
+	transform: rotate(45deg);
+	top: 12.5px;
+	background-color: #ffffff;
+	transition: top 0.2s linear, transform 0.2s ease-in 0.2s, background-color 0.2s ease-in;
+}
+
+.mobile-nav-btn.mobile-nav-btn-active div:nth-of-type(2) {
+	opacity: 0;
+	transition: opacity 0.2s linear;
+}
+
+.mobile-nav-btn.mobile-nav-btn-active div:nth-of-type(3) {
+	transform: rotate(-45deg);
+	top: 12.5px;
+	background-color: #ffffff;
+	transition: top 0.2s linear, transform 0.2s ease-in 0.2s, background-color 0.2s ease-in;
+}

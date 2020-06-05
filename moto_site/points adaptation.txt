@@ -1,0 +1,13 @@
+	Mobile:
+	320px
+
+	480px
+
+	Tablet:
+	780px
+
+	Laptop:
+	980px
+
+	Desktop:
+	1350px

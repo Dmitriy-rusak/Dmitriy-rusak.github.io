@@ -1,0 +1,115 @@
+.subscribe-wrapper {
+
+}
+
+.subscribe {
+	position: relative;
+	padding: 35px 0;
+
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: 2;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 76, 255, 0.75);
+	}
+
+	@media (min-width: 540px) {
+		padding: 85px 0;
+	}
+
+	@media (min-width: 768px) {
+		padding: 155px 0;
+	}	
+}
+
+.subscribe_img {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-position: center;
+	object-fit: cover;
+}
+
+.subscribe_overlay {
+	position: relative;
+	z-index: 3;	
+	padding: 0 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.subscribe_title {
+	margin-bottom: 20px;
+	color: #ffffff;
+	font-family: 'Teko', sans-serif;
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 1;
+	text-transform: uppercase;
+
+	@media (min-width: 540px) {
+		margin-bottom: 40px;
+		font-size: 62px;
+	}	
+
+	@media (min-width: 992px) {
+		margin-bottom: 80px;
+		font-size: 97px;
+	}	
+}
+
+.subscribe_form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+	@media (min-width: 540px) {
+		flex-direction: row;
+	}	
+
+	@media (min-width: 992px) {
+		width: 900px;
+	}
+}
+
+.subscribe_inp {
+	background-color: #ffffff;
+	padding: 0px 44px;
+	border: none;
+	height: 62px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 19px;
+	flex-grow: 2;
+}
+
+.subscribe_button {
+	width: 100%;
+	height: 62px;
+	border: none;
+	cursor: pointer;
+	flex-shrink: 0;
+	background-color: @mainBlueColor;
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 19px;
+	font-weight: 600;
+	text-transform: uppercase;
+	transition: background-color 0.2s ease;
+
+	@media (min-width: 540px) {
+		width: 180px;
+	}	
+}
+
+.subscribe_button:hover {
+	background-color: #2b66ee;
+}

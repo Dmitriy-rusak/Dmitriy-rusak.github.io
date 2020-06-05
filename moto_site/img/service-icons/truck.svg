@@ -1,0 +1,34 @@
+<svg id="truck" xmlns="http://www.w3.org/2000/svg" width="90" height="65" viewBox="0 0 90 65">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #004cff;
+      }
+
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Path_70" data-name="Path 70" class="cls-1" d="M243.749,4004.25a9,9,0,1,0,9,9A9.012,9.012,0,0,0,243.749,4004.25Zm0,15a6,6,0,1,1,6-6A6,6,0,0,1,243.749,4019.25Z" transform="translate(-222.75 -3957.75)"/>
+  <path id="Path_71" data-name="Path 71" class="cls-1" d="M294.749,4004.25a9,9,0,1,0,9,9A9.012,9.012,0,0,0,294.749,4004.25Zm0,15a6,6,0,1,1,6-6A6,6,0,0,1,294.749,4019.25Z" transform="translate(-222.75 -3957.75)"/>
+  <path id="Path_72" data-name="Path 72" class="cls-1" d="M312.511,3995.94l-13.5-21a1.5,1.5,0,0,0-1.261-.69h-16.5a1.5,1.5,0,0,0-1.5,1.5v37.5a1.5,1.5,0,0,0,1.5,1.5h6v-3h-4.5v-34.5h14.181l12.818,19.94v14.56h-7.5v3h9a1.5,1.5,0,0,0,1.5-1.5v-16.5A1.482,1.482,0,0,0,312.511,3995.94Z" transform="translate(-222.75 -3957.75)"/>
+  <path id="Path_73" data-name="Path 73" class="cls-1" d="M288.75,3993.75v-10.5h12v-3h-13.5a1.5,1.5,0,0,0-1.5,1.5v13.5a1.5,1.5,0,0,0,1.5,1.5h22.5v-3h-21Z" transform="translate(-222.75 -3957.75)"/>
+  <path id="Path_74" data-name="Path 74" class="cls-1" d="M281.25,3963.75h-57a1.5,1.5,0,0,0-1.5,1.5v48a1.5,1.5,0,0,0,1.5,1.5h12v-3h-10.5v-45h54v45h-28.5v3h30a1.5,1.5,0,0,0,1.5-1.5v-48A1.5,1.5,0,0,0,281.25,3963.75Z" transform="translate(-222.75 -3957.75)"/>
+  <rect class="cls-2" x="1.5" y="48" width="9" height="3"/>
+  <rect class="cls-2" x="31.5" y="48" width="25.5" height="3"/>
+  <rect class="cls-2" x="82.5" y="48" width="6" height="3"/>
+  <rect class="cls-2" x="6" y="12" width="52.5" height="3"/>
+  <rect class="cls-2" x="19.5" y="54" width="3" height="3"/>
+  <rect class="cls-2" x="70.5" y="54" width="3" height="3"/>
+  <rect class="cls-2" x="6" width="21" height="3"/>
+  <rect class="cls-2" width="3" height="3"/>
+</svg>
