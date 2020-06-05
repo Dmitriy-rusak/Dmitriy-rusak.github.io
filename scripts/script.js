@@ -269,7 +269,7 @@ function windowRedirect() {
 
 	setTimeout(function(){
 		clearInterval(timerId);
-		document.location.href = "https://http://z96183n5.beget.tech";
+		document.location.href = "https://z96183n5.beget.tech";
 	}, 5100);
 }
 ////
